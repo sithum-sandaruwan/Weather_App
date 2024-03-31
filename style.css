@@ -11,8 +11,8 @@ body {
 
 #container {
     background-color: #ffb142;
-    width: 1000px;
-    height: 500px;
+    width: 500px;
+    height: max-content;
     padding: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -68,7 +68,7 @@ input {
     font-size: 20px;
 }
 
-#weather-icon{
+#Weather-icon{
     width: 200px ;
     height: 200px;
     margin: 0 auto 10px;

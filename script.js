@@ -1,5 +1,5 @@
 function searchWeather() {
-    const apiKey = 'f45f00775fa0452b973105725243103';
+    const apiKey = '5c702073e2b1be5c0e7ffb6630e1fb0b';
     const city = document.getElementById('city').value;
 
     if (!city) {
@@ -7,7 +7,7 @@ function searchWeather() {
         return;
     }
 
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}$appid=${apiKey}`;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
     fetch(currentWeatherUrl)
         .then(response => response.json())
@@ -19,7 +19,7 @@ function searchWeather() {
             alert('Error fetching current weather data.please try again');
         });
 
-    fetch()
+    
 
 }
 
@@ -40,7 +40,7 @@ function displayWeather(data) {
         const temperature = Math.round(data.main.temp - 273.15);
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
-        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+        const iconUrl = `https://openwathermap.org/img/wn/${iconCode}@4x.png`;
 
         const temperatureHTML = `<p>${temperature}C</p>`;
 
