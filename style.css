@@ -1,4 +1,4 @@
-body{
+body {
 
     background-color: #54a0ff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -9,12 +9,69 @@ body{
     margin: 0;
 }
 
-#container{
-    background-color: #0652DD;
-    max-width: 600px;
+#container {
+    background-color: #ffb142;
+    width: 1000px;
+    height: 500px;
     padding: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(6px);
-    border: 3px solid rgba(255, 255, 255, 0.4);
+    border: 3px solid rgba(5, 5, 5, 0.692);
+    text-align: center;
+
+}
+
+h2,
+label,
+p {
+    color: #b33939;
+    margin: 20px 0;
+    align-self: center;
+    font-size: 40px;
+
+
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 9px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 4px solid white;
+    margin-top: 20px;
+}
+
+#Searchbtn {
+
+    background-color: #192a56;
+    font-size: medium;
+    color: aliceblue;
+    cursor: pointer;
+    width: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+#Searchbtn :hover{
+    background: #fefefe;
+}
+
+#temp-div p {
+
+    font-size: medium;
+    margin-top: -30px;
+}
+
+#weather-info {
+    font-size: 20px;
+}
+
+#weather-icon{
+    width: 200px ;
+    height: 200px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
 }
