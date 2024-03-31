@@ -11,8 +11,19 @@
 </head>
 
 <body>
-    <div id="container"></div>
-
+    <div id="container" >
+        <div class="row-cols-5 ">
+            <h2>Weather App</h2>
+            <input type="text" id="city" placeholder="Enter City">
+            <button id="Searchbtn" onclick="searchWeather()" >Search</button>
+        </div>
+        <div class="row-cols-5 ">
+            <img id="Weather-icon" alt="Weather Icon">
+            <div id="temp-div"></div>
+            <div id="weater-info"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
