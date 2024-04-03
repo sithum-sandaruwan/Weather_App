@@ -12,7 +12,7 @@ body {
 #container {
     background-color: #ffb142;
     width: 500px;
-    height: max-content;
+    height: auto;
     padding: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
