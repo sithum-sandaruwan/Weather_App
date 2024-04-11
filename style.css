@@ -10,7 +10,7 @@ body {
 }
 
 #container {
-    background-color: #ffb142;
+    background-color: #ba50ebc4;
     width: 500px;
     height: auto;
     padding: 20px;
@@ -25,7 +25,7 @@ body {
 h2,
 label,
 p {
-    color: #b33939;
+    color: #f9e323;
     margin: 20px 0;
     align-self: center;
     font-size: 40px;
@@ -60,18 +60,34 @@ input {
 
 #temp-div p {
 
-    font-size: medium;
-    margin-top: -30px;
+
+    font-size: 40px;
+    margin-top: -1px;
+    align-self: center;
 }
 
 #weather-info {
     font-size: 20px;
+    margin-left: -5px;
 }
 
-#Weather-icon{
+#WeatherIcon{
     width: 200px ;
     height: 200px;
     margin: 0 auto 10px;
     margin-bottom: 0;
     display: none;
+}
+
+#Humidity p{
+    font-size: 20px;
+    margin-top: 50px;
+   
+}
+
+#Humidity-level{
+    font-size: medium;
+    text-decoration-color: #54a0ff;
+    margin-top: 70px;
+    
 }
