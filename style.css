@@ -62,13 +62,14 @@ input {
 
 
     font-size: 40px;
-    margin-top: -1px;
+    margin-top: 25px;
     align-self: center;
 }
 
 #weather-info {
     font-size: 20px;
     margin-left: -5px;
+    align-content: center;
 }
 
 #WeatherIcon{
@@ -85,9 +86,16 @@ input {
    
 }
 
-#Humidity-level{
-    font-size: medium;
-    text-decoration-color: #54a0ff;
-    margin-top: 70px;
+#humidity-icon{
+    margin-left: -5px;
+    width: 30px;
+    height: 30px;
+}
+
+#Humidity-level p{
     
+    font-size: 20px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: -15px;
 }

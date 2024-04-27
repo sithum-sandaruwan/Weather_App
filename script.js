@@ -16,7 +16,9 @@ function searchWeather() {
             return response.json()
         })
         .then(data => {
+            console.log(data);
             displayWeather(data);
+            
         })
         .catch(error => {
             console.error('Error fetching current weather data:', error);
@@ -25,9 +27,9 @@ function searchWeather() {
 
 function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
-    const weatherInfoDiv = document.getElementById('weather-info');
+    const weatherInfoDiv = document.getElementById('Weather-info');
     const weatherIcon = document.getElementById('Weather-icon');
-    const Humidity = document.getElementById('Humidity-level');
+    const humidityElement = document.getElementById('Humidity-level');
 
     if (data.cod === '404') {
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>` ;
@@ -36,10 +38,10 @@ function displayWeather(data) {
         const temperature = Math.round(Number(data.main.temp) - 273.15);
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
-        const Humiditylevel = data.main.humidity;
+        const humidityLevel = data.main.humidity;
         //const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
 
-        console.log(Humiditylevel);
+        console.log(humidityLevel);
 
         const temperatureHTML = `<p>${temperature}℃</p>`;
 
@@ -47,22 +49,22 @@ function displayWeather(data) {
             <p>${cityName}</p>
             <p>${description}</p>`;
 
-        const HumidityHTML = `<p>${Humiditylevel}%</p>`;
+        const humidityHTML = `<p>${humidityLevel}%</p>`;
     
         const weatherIcons ={
             '01d': 'images/Weather-icon01.png'
         };
     
-        document.getElementById('WeatherIcon').src = `D:\OneDrive\Desktop\Weather_App\images/${weatherIcons[iconCode]}`;
+        document.getElementById('WeatherIcon').src = `D:\OneDrive\Desktop\Weather_App\images\${weatherIcons[iconCode]}`;
        
 
         tempDivInfo.innerHTML = temperatureHTML;
         weatherInfoDiv.innerHTML = weatherHtml;
-        Humidity.innerHTML = HumidityHTML;
-        // weatherIcon.src = iconUrl;
-        // weatherIcon.alt = description;
+        humidityElement.innerHTML = humidityHTML;
+        weatherIcon.src = iconUrl;
+        weatherIcon.alt = description;
 
-        //showImage();                
+        showImage();                
     }
 }
 
@@ -70,6 +72,6 @@ function showImage() {
 
     
 
-    //const weatherIcon = document.getElementById('Weather-icon');
+    const weatherIcon = document.getElementById('Weather-icon');
     WeatherIcon.style.display='block';
 }
