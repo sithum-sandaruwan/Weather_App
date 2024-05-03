@@ -27,9 +27,13 @@ function searchWeather() {
 
 function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
+    const cityInfoDiv = document.getElementById('City-info');
     const weatherInfoDiv = document.getElementById('Weather-info');
     const weatherIcon = document.getElementById('Weather-icon');
     const humidityElement = document.getElementById('Humidity-level');
+   
+
+    
 
     if (data.cod === '404') {
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>` ;
@@ -41,26 +45,30 @@ function displayWeather(data) {
         const humidityLevel = data.main.humidity;
         //const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
 
-        console.log(humidityLevel);
+            console.log(humidityLevel);
+            console.log(cityName);
 
         const temperatureHTML = `<p>${temperature}℃</p>`;
 
-        const weatherHtml = `
-            <p>${cityName}</p>
-            <p>${description}</p>`;
+        const cityHTML = `<p>${cityName}</p>`;
+      
+
+        const weatherHtml = `<p>${description}</p>`;
 
         const humidityHTML = `<p>${humidityLevel}%</p>`;
     
-        const weatherIcons ={
-            '01d': 'images/Weather-icon01.png'
-        };
+        if (description === "scattered clouds") {
+            var iconUrl = "D:\OneDrive\Desktop\Weather_App\images\cloudy (2).png"
+        }
+        
     
-        document.getElementById('WeatherIcon').src = `D:\OneDrive\Desktop\Weather_App\images\${weatherIcons[iconCode]}`;
+        document.getElementById('WeatherIcon').src = ``;
        
 
         tempDivInfo.innerHTML = temperatureHTML;
-        weatherInfoDiv.innerHTML = weatherHtml;
+        cityInfoDiv.innerHTML = cityHTML;
         humidityElement.innerHTML = humidityHTML;
+        weatherInfoDiv.innerHTML = weatherHtml;
         weatherIcon.src = iconUrl;
         weatherIcon.alt = description;
 

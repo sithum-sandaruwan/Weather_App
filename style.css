@@ -65,12 +65,21 @@ input {
     margin-top: 25px;
     align-self: center;
 }
+#City-info {
+    
+    margin-top: -30px;
+    padding: 0px;
+    
+}
 
-#weather-info {
+#Weather-info {
     font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: -15px;
     margin-left: -5px;
     align-content: center;
 }
+
 
 #WeatherIcon{
     width: 200px ;
@@ -82,20 +91,26 @@ input {
 
 #Humidity p{
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 15px;
+
    
 }
 
 #humidity-icon{
-    margin-left: -5px;
-    width: 30px;
-    height: 30px;
+    margin-top: 50px;
+    margin-bottom: -140px;
+    width: 150px;
+    height: 150px;
+    padding: 0px;
 }
 
 #Humidity-level p{
     
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     font-size: 20px;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: -15px;
 }
+
