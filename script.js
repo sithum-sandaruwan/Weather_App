@@ -29,7 +29,7 @@ function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
     const cityInfoDiv = document.getElementById('City-info');
     const weatherInfoDiv = document.getElementById('Weather-info');
-    const weatherIcon = document.getElementById('Weather-icon');
+    const weatherIcon = document.getElementById('WeatherIcon');
     const humidityElement = document.getElementById('Humidity-level');
    
 
@@ -56,10 +56,12 @@ function displayWeather(data) {
         const weatherHtml = `<p>${description}</p>`;
 
         const humidityHTML = `<p>${humidityLevel}%</p>`;
+
+        //var iconUrl = "D:\ICET Documents\Internet Technologies\Weather_App\images\cloudy (2).png"
     
-        if (description === "scattered clouds") {
-            var iconUrl = "D:\OneDrive\Desktop\Weather_App\images\cloudy (2).png"
-        }
+        if (description === "broken clouds") 
+            var iconUrl = "images\cloudy(2).png"
+        
         
     
         document.getElementById('WeatherIcon').src = ``;
